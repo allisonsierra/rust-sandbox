@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<security>
+  <userRoleMappings>
+    <userRoleMapping>
+      <userId>user-with-one-role</userId>
+      <source>default</source>
+      <roles>
+        <role>org.group.4users-deployer</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>user-with-two-roles</userId>
+      <source>default</source>
+      <roles>
+        <role>org.group.4users-deployer</role>
+        <role>org.group.3users-deployer</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>user-with-three-roles</userId>
+      <source>default</source>
+      <roles>
+        <role>org.group.4users-deployer</role>
+        <role>org.group.3users-deployer</role>
+        <role>org.group.2users-deployer</role>
+      </roles>
+    </userRoleMapping>
+    <userRoleMapping>
+      <userId>user-with-ten-roles</userId>
+      <source>default</source>
+      <roles>
+        <role>org.group.4users-deployer</role>
+        <role>org.group.3users-deployer</role>
+        <role>org.group.2users-deployer</role>
+        <role>org.group.1user1-deployer</role>
+        <role>org.group.1user2-deployer</role>
+        <role>org.group.1user3-deployer</role>
+        <role>org.group.1user4-deployer</role>
+        <role>org.group.1user5-deployer</role>
+        <role>org.group.1user6-deployer</role>
+        <role>org.group.1user7-deployer</role>
+      </roles>
+    </userRoleMapping>
+  </userRoleMappings>
+</security>
