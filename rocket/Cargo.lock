@@ -694,16 +694,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "quick-xml"
-version = "0.22.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "8533f14c8382aaad0d592c812ac3b826162128b65662331e1127b45c3d18536b"
-dependencies = [
- "memchr",
- "serde",
-]
-
-[[package]]
 name = "quote"
 version = "1.0.15"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -818,9 +808,9 @@ dependencies = [
 name = "rocket"
 version = "0.1.0"
 dependencies = [
- "quick-xml",
  "rocket 0.5.0-rc.1",
  "serde",
+ "serde_json",
 ]
 
 [[package]]

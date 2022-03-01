@@ -1,0 +1,46 @@
+{
+    "security": {
+        "userRoleMappings": [
+            {
+                "userId": "user-with-one-role",
+                "source": "default",
+                "roles": [
+                    "org.group.4users-deployer"
+                ]
+            },
+            {
+                "userId": "user-with-two-roles",
+                "source": "default",
+                "roles": [
+                    "org.group.4users-deployer",
+                    "org.group.3users-deployer"
+                ]
+            },
+            {
+                "userId": "user-with-three-roles",
+                "source": "default",
+                "roles": [
+                    "org.group.4users-deployer",
+                    "org.group.3users-deployer",
+                    "org.group.2users-deployer"
+                ]
+            },
+            {
+                "userId": "user-with-ten-roles",
+                "source": "default",
+                "roles": [
+                    "org.group.4users-deployer",
+                    "org.group.3users-deployer",
+                    "org.group.2users-deployer",
+                    "org.group.1user1-deployer",
+                    "org.group.1user2-deployer",
+                    "org.group.1user3-deployer",
+                    "org.group.1user4-deployer",
+                    "org.group.1user5-deployer",
+                    "org.group.1user6-deployer",
+                    "org.group.1user7-deployer"
+                ]
+            }
+        ]
+    }
+}

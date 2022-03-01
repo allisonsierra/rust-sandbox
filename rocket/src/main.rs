@@ -1,7 +1,8 @@
 #[macro_use]
 extern crate rocket;
 
-mod securityroles;
+mod groups;
+mod json;
 
 #[get("/")]
 fn index() -> &'static str {
