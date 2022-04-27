@@ -1,3 +1,8 @@
+use validate::validate::{
+    FailureReason, Validate, ValidationContext, ValidationError, ValidationResult,
+};
+use validate_derive::Validate;
+
 #[derive(Debug, PartialEq)]
 pub struct Bom {
     pub version: u32,
@@ -6,12 +11,12 @@ pub struct Bom {
     pub component: Option<Component>,
 }
 
-#[derive(Debug, PartialEq)]
+#[derive(Validate, Debug, PartialEq)]
 pub enum Component {
     Gadget,
     Widget,
     Wizzlebop,
-    Custom(String),
+    Unknown(String),
 }
 
 #[derive(Debug, PartialEq)]
@@ -25,7 +30,24 @@ pub enum Category {
     Dookie,
     Nifty,
     Uncategorized,
-    Custom(String),
+    Unknown(String),
+}
+
+impl Validate for Category {
+    fn validate_with_context(
+        &self,
+        context: ValidationContext,
+    ) -> Result<ValidationResult, ValidationError> {
+        match self {
+            Category::Unknown(string) => Ok(ValidationResult::Failed {
+                reasons: vec![FailureReason {
+                    message: format!("Category unknown: {}", string),
+                    context,
+                }],
+            }),
+            _ => Ok(ValidationResult::Passed),
+        }
+    }
 }
 
 #[derive(Debug, PartialEq)]
